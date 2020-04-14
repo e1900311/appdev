@@ -1,5 +1,4 @@
-# appdev project 2020
-
+# Appdev project 2020
 # This project is for I-IT-1N students to understand what procedure and
 # what tools are needed in an application development.
 
@@ -34,12 +33,12 @@ Table of Content
     In our case, so far, the list may look like this:
 
     README.md : this file
-    screen.c :  contains screen manipulation functions
-    screen.h :  contains screen function declaration and related constants
-    comm.c :    contains a function which send a POST-request using curl
-    comm.c :    contains declaration of senddata function
-    makefile :   contains a set of directives used by a make build automation tool
-    testcurl.c : contains basic implementation of utilizing curl
+    screen.c :  contains screen manipulation functions  
+    screen.h :  contains screen function declaration and related constants  
+    comm.c :    contains a function which send a POST-request using curl  
+    comm.c :    contains declaration of senddata function  
+    makefile :   contains a set of directives used by a make build automation tool  
+    testcurl.c : contains basic implementation of utilizing curl  
     testscreen.c : contains a small program which draws text animation in the terminal, as well as certain figures and basic information about the student 
 
 5. Copyright and licence information
