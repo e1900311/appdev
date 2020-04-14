@@ -33,4 +33,4 @@ void clearscreen(void);
 void gotoXY(int, int);
 void drawbar(int, int);
 Position getscreensize(void);
-
+int devicestatus(void);
