@@ -1,4 +1,5 @@
 // define sound structure (deal with .wav file)
+//#define SDEBUG
 
 typedef struct {
     char chunkID[4];        // should be always "RIFF"
@@ -19,3 +20,4 @@ typedef struct {
 // function declaration
 WAVheader readwavhdr(FILE *fp);
 void displayWAVhdr(WAVheader h);
+void wavdata(WAVheader h, FILE* fp);
