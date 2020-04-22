@@ -2,6 +2,7 @@
 #include <math.h>
 #include "sound.h"
 #include "screen.h"
+#include "comm.h"
 
 WAVheader readwavhdr(FILE *fp) {
     WAVheader myh;
@@ -33,6 +34,7 @@ void wavdata(WAVheader h, FILE* fp) {
     
     short samples[500]; //to read 500 samples from wav file
     short peaks = 0, flag = 0;
+    short max_db_value = 0;
 
     for (int i = 0; i < 160; i++) {
         fread(samples, sizeof(samples), 1, fp);
@@ -48,6 +50,10 @@ void wavdata(WAVheader h, FILE* fp) {
 #else
         // display re value
         double re_value = (int)20* log10(re);
+        if (re_value > max_db_value) {
+            max_db_value = re_value;
+        }
+
         if (re_value > 60) {
             setfgcolor(RED);
             if (flag == 0) {
@@ -68,4 +74,10 @@ void wavdata(WAVheader h, FILE* fp) {
     gotoXY(1, 140);
     printf("Peaks count: %d", peaks);
 
+    char* url = "http://www.cc.puv.fi/~e1900311/php/sound.php";
+    char post_data[32];
+    sprintf(post_data, "%s%d%s%d", "peaks=", peaks, "&maxDB=", max_db_value);
+    senddata(post_data, url);
+    getchar();
+    clearscreen();
 }
