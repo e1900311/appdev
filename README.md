@@ -1,13 +1,11 @@
 # Appdev project 2020
-# This project is for I-IT-1N students to understand what procedure and
-# what tools are needed in an application development.
+This project is for I-IT-1N students to understand what procedure and what tools are needed in an application development.
 
-General Description of the Application
+### General Description of the Application
 
-    This application will...
-    Always indent for paragraphs.
+This application analyzes the first 5s of the given .wav, displaying db datagram, counting peak values an calculataling the maximum db value to send it to the pre-defined server afterwards
 
-Table of Content
+### Table of Content
 1. Configuration instrusctions
 2. Installation inscructions
 3. Operating instructions
@@ -16,19 +14,32 @@ Table of Content
 6. Contact information
 7. Credits and acknowledgements
 
-1. Configuration instructions
-    In this section you need to tell the user how to configure the system(s)
-    to run this application
+#### 1. Configuration instructions
+In order to use this application, you would need gcc, php and curl-lib installed on your system. You may want to check their availibility running the following commands:
 
-2. Installation instructions
-    In this section you need to tell the user how to install this application
-    from source code (usually is github repository) to an executable.
+```bash
+gcc --version
+php --version
+[ -f /usr/include/i386-linux-gnu/curl/curl.h ] && echo "OK" || echo "Curl not found"
+```
 
-3. Operating instructions
-    In this section you need to tell the user how to run the application. E.g.,
-    any command line arguments needed, any 3rd party library needed, etc.
+#### 2. Installation instructions
+Download zip-file or clone this repository
+```bash
+git clone https://github.com/e1900311/appdev.git
+```
 
-4. File manifest
+#### 3. Operating instructions
+Build the program:
+```bash
+make
+```
+Run the program, passing the filename as the first argument
+```bash
+./sound ${FILENAME}
+```
+
+#### 4. File manifest
     In this section you need to offer a list of files included in this application.
     In our case, so far, the list may look like this:
 
