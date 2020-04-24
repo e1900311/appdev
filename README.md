@@ -55,6 +55,9 @@ in that case, the application would use the default filename "test.wav"
     testscreen.c :  contains a small program which draws text animation in the terminal, as well as certain figures and basic information about the student
     main.c  :       contains the application logic and the entry point
     sound.php :     server-side component. handles POST-requests, saves data to file
-    
-#### 5. Copyright and licence information
+
+#### 5. Contact information
+Feel free to contact me at e1900311@edu.vamk.fi
+
+#### 6. Copyright and licence information
 This application follows GPLv2 license.
