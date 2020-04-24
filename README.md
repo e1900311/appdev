@@ -24,7 +24,7 @@ php --version
 ```
 
 #### 2. Installation instructions
-Download zip-file or clone this repository
+Download zip-file or clone this repository:
 ```bash
 git clone https://github.com/e1900311/appdev.git
 ```
@@ -38,19 +38,23 @@ Run the program, passing the filename as the first argument
 ```bash
 ./sound ${FILENAME}
 ```
+or run it without arguments
+```bash
+./sound
+```
+in that case, the application would use the default filename "test.wav"
 
 #### 4. File manifest
-    In this section you need to offer a list of files included in this application.
-    In our case, so far, the list may look like this:
-
-    README.md : this file
-    screen.c :  contains screen manipulation functions  
-    screen.h :  contains screen function declaration and related constants  
-    comm.c :    contains a function which send a POST-request using curl  
-    comm.c :    contains declaration of senddata function  
-    makefile :   contains a set of directives used by a make build automation tool  
-    testcurl.c : contains basic implementation of utilizing curl  
-    testscreen.c : contains a small program which draws text animation in the terminal, as well as certain figures and basic information about the student 
-
-5. Copyright and licence information
-    This application follows GPLv2 license.
+    README.md :     this file
+    screen.c :      contains screen manipulation functions  
+    screen.h :      contains screen function declaration and related constants  
+    comm.c :        contains a function which send a POST-request using curl  
+    comm.h :        contains declaration of senddata function  
+    makefile :      contains a set of directives used by a make build automation tool  
+    testcurl.c :    contains basic implementation of utilizing curl  
+    testscreen.c :  contains a small program which draws text animation in the terminal, as well as certain figures and basic information about the student
+    main.c  :       contains the application logic and the entry point
+    sound.php :     server-side component. handles POST-requests, saves data to file
+    
+#### 5. Copyright and licence information
+This application follows GPLv2 license.
